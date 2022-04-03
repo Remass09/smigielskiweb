@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+<title>ZADANIE DOMOWE IV</title>
+<link type="text/css" rel="stylesheet" href="css/red.css" />
+<link type="text/css" rel="stylesheet" href="css/print.css" media="print"/>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/cufon.yui.js"></script>
+<script type="text/javascript" src="js/scrollTo.js"></script>
+<script type="text/javascript" src="js/myriad.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript">
+		Cufon.replace('h1,h2');
+</script>
+<script type="text/javascript">
+function zegarek(offs){
+ offs=offs+lato_offset;
+ var g,m,s,teraz=new Date();
+ with(teraz){
+  setTime(getTime()+(offs*3600000));
+  g=getUTCHours(); m=getUTCMinutes(); s=getUTCSeconds()}
+ 
+ var czas=" "+(g<10?"0":"")+g;
+ czas+=(m<10?":0":":")+m;
+ czas+=(s<10?":0":":")+s;
+ return czas;
+}
+
+function zegarStart(){
+ var lato=new Date(2000,7,1), teraz=new Date();
+ lato_offset=(teraz.getTimezoneOffset()==lato.getTimezoneOffset())?1:0;
+ ustawCzas();
+ setInterval('ustawCzas()',1000);
+}
+
+function ustawCzas(){
+ function Czas(id,offs){
+  document.clock.elements[id].value=zegarek(offs);
+ }
+ Czas("vancouver", -8);
+ Czas("newyork", -5);
+ Czas("buenos", -3);
+ Czas("london", 0);
+ Czas("warszawa", 1);
+ Czas("kair", 2);
+ Czas("delhi", 5.5);
+ Czas("pekin", 8);
+ Czas("tokio", 9);
+ Czas("sydney", 10);
+}
+</script>
+</head>
+<body onload="zegarStart()">
+<div id="wrapper">
+  <div class="wrapper-top"></div>
+  <div class="wrapper-mid">
+    <div id="paper">
+      <div class="paper-top"></div>
+      <div id="paper-mid">
+        <div class="entry">
+          <img class="portrait" src="images/portret.jpg" alt="REMK" />
+          <div class="self">
+            <h1 class="name">Remigiusz Śmigielski <br />
+              <span>Informatyka i ekonometria</span></h1>
+            <ul>
+              <li class="ad">Długa 44/50, 00-241 Warszawa</li>
+              <li class="mail">rh.smigielsk@student.uw.edu.pl</li>
+              <li class="tel">+48 213 721 371</li>
+              <li class="web">www.mojaosobistastrona.com</li>
+            </ul>
+          </div>
+          <div class="social">
+            <ul>
+              <li><a class='north' href="contact/CV.pdf" title="Download .pdf"><img src="images/icn-save.jpg" alt="Download the pdf version" /></a></li>
+              <li><a class='north' href="javascript:window.print()" title="Print"><img src="images/icn-print.jpg" alt="" /></a></li>
+              <li><a class='north' id="contact" href="contact/index.html" title="Contact Me"><img src="images/icn-contact.jpg" alt="" /></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="entry">
+          <h2>PERSPEKTYWY</h2>
+          <p>Po ukończeniu studiów chciałbym zacząć prace w sektorze bankowym. Ale również chciałbym zdobyć licencję maklera giełdowego i rozpocząć swoją przygode z rynkiem kapitałowym w którymś z domów maklerskich.</p>
+        </div>
+        <div class="entry">
+          <h2>EDUKACJA</h2>
+          <div class="content">
+            <h3>Październik 2020 - obecnie</h3>
+            <p>Wydział Nauk Ekonomicznych, Uniwersytet Warszawski<br />
+              <em>Licencjat z ekonomii</em></p>
+          </div>
+          <div class="content">
+            <h3>Wrzesień 2017 - Czerwiec 2020</h3>
+            <p>LXX Liceum Ogólnokształcące im. Aleksandra Kamińskiego<br />
+              <em>Klasa o profilu matematyczno - fizycznym z rozszerzonym językiem niemieckim</em></p>
+          </div>
+        </div>
+        <div class="entry">
+          <h2>DANE UCZELNI</h2>
+          <div class="content">
+            <h3>Uniwersytet Warszawski</h3>
+            <p>ul. Krakowskie Przedmieście 26/28 00-927 Warszawa<br>
+              <em><a href="https://www.uw.edu.pl">www.uw.edu.pl</a></em></p>
+          </div>
+          <div class="content">
+            <h3>Wydział Nauk Ekonomicznych</h3>
+            <p>ul. Długa 44/50 00-241 Warszawa<br>
+              <em><a href="https://www.wne.uw.edu.pl/">www.wne.uw.edu.pl</a></em></p>
+          </div>
+        </div>
+        <div class="entry">
+          <h2>ZAINTERESOWANIA</h2>          
+          <div class="content">
+            <ul class="skills">
+              <li>Motoryzacja/Formuła 1</li>
+              <li>Kinematografia</li>
+              <li>Kulinaria</li>
+              <li>Rynek kapitałowy</li>
+              <li>Technologia</li>
+              <li>Muzyka</li>
+              <li>Malarstwo</li>
+              <li>Gaming</li>
+              <li>Podróże</li>
+            </ul>
+          </div>
+        </div>
+        <div class="entry">
+          <h2>UMIEJĘTNOŚCI</h2>
+          <div class="content">
+            <h3>Języki programowania</h3>
+            <ul class="skills">
+              <li>C++</li>
+              <li>XHTML/CSS</li>
+              <li>JavaScript</li>
+              <li>R</li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Języki</h3>
+            <ul class="skills">
+              <li>Niemiecki - podstawowy</li>
+              <li>Angielski - komunikatywny</li>
+              <li>Polski - ojczysty</li>
+            </ul>
+          </div>
+        </div>
+        <div class="entry">
+        <h2>MOJE PODRÓŻE</h2>
+        	<ul class="works">
+        		<li><a href="images/20210807_150035.jpg" rel="gallery" title="Amsterdam"><img src="images/20210807_150035.jpg" alt="" /></a></li>
+        		<li><a href="images/20210708_145318.jpg" rel="gallery" title="Wieden"><img src="images/20210708_145318.jpg" alt="" /></a></li>
+        		<li><a href="images/20210810_183642.jpg" rel="gallery" title="Bruksela"><img src="images/20210810_183642.jpg" alt="" /></a></li>
+        	</ul>
+          <form name="clock">
+              <table border="0" width="200" align="center">
+                  <tr><td><input name="vancouver" size="5"> Vancouver</td>
+                    <td><input name="kair" size="5"> Kair</td></tr>
+                  <tr><td><input name="newyork" size="5"> New Jork</td>
+                      <td><input name="delhi" size="5"> Delhi</td></tr>
+                  <tr><td><input name="buenos" size="5"> Buenos Aires</td>
+                      <td><input name="pekin" size="5"> Pekin</td></tr>
+                  <tr><td><input name="london" size="5"> London</td>
+                      <td><input name="tokio" size="5"> Tokio</td></tr>
+                  <tr><td><input name="warszawa" size="5"> Warszawa</td>
+                      <td><input name="sydney" size="5"> Sydney</td></tr>
+              </table>
+          </form>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="paper-bottom"></div>
+    </div>
+  </div>
+  <div class="wrapper-bottom"></div>
+</div>
+</body>
+</html>
